@@ -2271,3 +2271,92 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+
+  .hero h1 {
+      font-size: 2.2em;
+  }
+
+  .hero p {
+      font-size: 1.1em;
+      color: #555;
+  }
+
+  .project-entry {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+
+.project-summary {
+    font-size: 1.05em;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Tags (keep these, they look good in this layout) */
+.tag {
+    display: inline-block;
+    background: #eef2f7;
+    padding: 4px 10px;
+    margin: 3px;
+    border-radius: 6px;
+    font-size: 0.75em;
+}
+
+/* Full-width poster */
+.poster-full {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+.poster-full iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+/* 🔥 Force tighter spacing in HTML5UP template */
+
+#main .inner section {
+    margin-bottom: 1.5em !important;
+}
+
+#main .inner .project-entry {
+    margin-bottom: 1.4em !important;
+    padding-bottom: 1em !important;
+}
+
+#main .inner p {
+    margin-bottom: 0.8em !important;
+}
+
+#main .inner ul {
+    margin-top: 0.3em !important;
+    margin-bottom: 0.8em !important;
+}
+
+/* Fix section header spacing */
+#main .inner .section-header h1,
+#main .inner .section-header h2 {
+    margin-bottom: 0.2em !important;
+}
+
+#main .inner .section-header p {
+    margin-bottom: 0.6em !important;
+}
+
+/* Fix vertical space around poster */
+#main .inner .poster-full {
+    margin-top: 0.8em !important;
+    margin-bottom: 0.6em !important;
+}
+
+/* Tighten HR spacing */
+#main .inner hr {
+    margin: 1.2em 0 !important;
+}
+/* 🔥 Remove built-in section padding */
+#main > .inner > section {
+    padding-top: 0.8em !important;
+    padding-bottom: 0.8em !important;
+}
