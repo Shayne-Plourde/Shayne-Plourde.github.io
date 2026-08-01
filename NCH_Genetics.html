@@ -109,64 +109,79 @@
 					</article>
 
 					<hr>
-					<!-- Other projects (simpler) -->
 					<article class="project-entry">
-						<h3>PacBio Long-Read WGS Pipeline</h3>
+
+						<h3>RNU Variant Discovery Pipeline</h3>
 
 						<p class="project-summary">
-							Long-read whole genome sequencing pipeline for improved structural variant detection 
-							and genome resolution in clinical and research settings.
+							Framework for systematic discovery and interpretation of pathogenic
+							spliceosomal small nuclear RNA (snRNA) variants in rare disease cohorts.
 						</p>
 
 						<p>
-							<span class="tag">PacBio</span>
-							<span class="tag">Long-read</span>
-							<span class="tag">SV Detection</span>
+							<span class="tag">snRNA</span>
+							<span class="tag">Rare Disease</span>
+							<span class="tag">RNA-seq</span>
+							<span class="tag">Noncoding Variants</span>
 						</p>
 
 						<ul>
-							<li>Processes HiFi reads for high-accuracy genome analysis</li>
-							<li>Enables detection of complex structural variants missed by short reads</li>
-							<li>Supports scalable workflows on high-performance compute environments</li>
+							<li>Interrogates disease-associated spliceosomal RNA genes frequently overlooked by conventional pipelines.</li>
+							<li>Integrates ClinVar, gnomAD, and published literature to prioritize candidate variants.</li>
+							<li>Aggregates cohort-level genomic data to identify recurrent and rare disease-associated alleles.</li>
+							<li>Supports both prospective analysis and reanalysis of whole genome sequencing datasets.</li>
+							<li>Incorporates transcriptomic validation through RNA sequencing.</li>
 						</ul>
-												
-						<div class="poster-full">
-							<embed 
-								src="assets/posters/PacBio.pdf" 
-								type="application/pdf" 
-								width="100%" 
-								height="600px" />
-						</div>
-
 
 						<p>
-							<strong>Impact:</strong> Implemented a PacBio pipeline for internal use with our standard architecture style.
+							<strong>Results:</strong> Identified diagnostic variants in 16 affected
+							individuals from 12 unrelated families with pathogenic variation in
+							RNU2-2, RNU4-2, RNU4ATAC, RNU6ATAC, and RNU12.
 						</p>
+
+						<p>
+							<strong>Impact:</strong> Expanded the genetic and transcriptomic landscape
+							of spliceosomal RNA disorders while demonstrating the value of systematic
+							noncoding variant analysis in rare disease diagnostics.
+						</p>
+						<a href="RNU.html" class="button">More Info</a>
+						
+
 					</article>
 					<hr>
+					<!-- Other projects (simpler) -->
 					<article class="project-entry">
-						<h3>RNU Pipeline</h3>
+						<h3>PacBio Long-Read Genome Sequencing Pipeline (pbGS)</h3>
 
 						<p class="project-summary">
-							Pipeline for annotation and prioritization of non-coding RNA genes in rare disease analysis.
+							Clinical and research workflow for analysis of PacBio HiFi sequencing data,
+							enabling comprehensive detection of structural variants and challenging
+							genomic variation missed by conventional short-read sequencing.
 						</p>
 
 						<p>
-							<span class="tag">ncRNA</span>
-							<span class="tag">Annotation</span>
+							<span class="tag">PacBio HiFi</span>
+							<span class="tag">Long-Read Sequencing</span>
+							<span class="tag">Structural Variation</span>
 							<span class="tag">Rare Disease</span>
 						</p>
 
 						<ul>
-							<li>Integrates multiple ncRNA databases and genomic annotations</li>
-							<li>Prioritizes regulatory and non-coding variants</li>
-							<li>Supports discovery beyond protein-coding regions</li>
+							<li>Processes PacBio HiFi whole genome sequencing data using a standardized analysis workflow.</li>
+							<li>Supports detection of structural variants, repeat expansions, and complex genomic rearrangements.</li>
+							<li>Participated in development and validation efforts for clinical implementation of long-read sequencing.</li>
+							<li>Integrates seamlessly with existing genomic analysis infrastructure.</li>
+							<li>Provides improved resolution in regions that are difficult to analyze using short-read technologies.</li>
 						</ul>
 
 						<p>
-							<strong>Impact:</strong> Expands diagnostic search space beyond traditional gene models.
+							<strong>Impact:</strong> Helped establish long-read whole genome sequencing
+							as a complementary diagnostic technology, expanding the ability to detect
+							clinically relevant genomic variation in previously challenging cases.
 						</p>
+						
 					</article>
+					
 
 				</section>
 
