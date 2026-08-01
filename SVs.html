@@ -1,0 +1,285 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SVs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a class="logo">
+									<strong>Shayne M. Plourde</strong><br>
+									<span style="font-size:0.8em; color:#777;">
+										Bioinformatics • Genomic Data Science
+									</span>
+								</a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/shayne-plourde/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://github.com/Shayne-Plourde" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="mailto:shayne.plourde@outlook.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Structural Variant Analysis Pipeline</h1>
+									</header>
+									<p>
+										I designed and implemented a structural variant analysis pipeline that
+										transformed SV interpretation from a largely manual process into a
+										scalable workflow capable of supporting cohort-scale rare disease studies.
+									</p>
+									<!-- FULL-WIDTH POSTER -->
+									<div class="poster-full">
+										<embed 
+											src="assets/posters/SV_ASHG_2025_Poster.pdf" 
+											type="application/pdf" 
+											width="100%" 
+											height="400px" />
+									</div>
+									<h2>Background</h2>
+									<p>
+										Structural variants (SVs), including deletions, duplications, inversions,
+										translocations, and complex rearrangements, represent an important source
+										of genetic variation but remain difficult to analyze at scale. While
+										whole-genome sequencing has improved rare disease diagnosis, many
+										analysis pipelines focus primarily on single nucleotide variants (SNVs),
+										small insertions/deletions (indels), and copy number variants (CNVs).
+										As a result, potentially pathogenic structural variation often remains
+										unexplored in unsolved cases.
+									</p>
+
+									<p>
+										To address this challenge, I designed and implemented a structural
+										variant analysis pipeline for rare disease research at the Institute
+										for Genomic Medicine. The goal was to enable systematic interrogation
+										of structural variation within a cohort of patients who remained without
+										a molecular diagnosis after conventional genome analysis.
+									</p>
+
+									<hr class="major" />
+
+									<h2>The Challenge</h2>
+
+									<p>
+										Structural variant callers such as GRIDSS and Manta are highly sensitive
+										but typically produce more than 10,000 candidate structural variants per
+										genome. Reviewing this volume of data manually is impractical and creates
+										a major barrier to incorporating SV analysis into routine rare disease
+										workflows.
+									</p>
+
+									<p>
+										We sought to develop a scalable filtering framework capable of reducing
+										thousands of calls to a manageable set of high-priority candidates for
+										analyst review while maintaining sensitivity for disease-causing events.
+									</p>
+
+									<hr class="major" />
+
+									<h2>Pipeline Design</h2>
+
+									<p>
+										The pipeline combines structural variant calling, functional annotation,
+										recurrent-event detection, and population-based filtering to prioritize
+										clinically relevant variants.
+									</p>
+
+									<ol>
+										<li>
+											Structural variants are detected using multiple SV callers,
+											including GRIDSS and Manta.
+										</li>
+
+										<li>
+											Candidate variants are annotated with overlapping genes,
+											transcript information, and known OMIM disease associations.
+										</li>
+
+										<li>
+											Intergenic and low-priority variants are removed to dramatically
+											reduce analytical burden.
+										</li>
+
+										<li>
+											Internal recurrent structural variant databases are generated from
+											unaffected individuals enrolled in the same research study.
+										</li>
+
+										<li>
+											Common recurrent events are flagged and excluded, allowing
+											prioritization of rare potentially pathogenic variants.
+										</li>
+									</ol>
+
+									<p>
+										This strategy reduces the candidate set from more than 10,000
+										structural variants per genome to fewer than 30 variants requiring
+										detailed review.
+									</p>
+
+									<hr class="major" />
+
+									<h2>Cohort Analysis</h2>
+
+									<p>
+										The pipeline was applied to a cohort of unresolved rare disease cases
+										enrolled through our translational research program.
+									</p>
+
+									<ul>
+										<li>~300 families enrolled in the rare disease study.</li>
+										<li>~70% remained unsolved after initial genomic analyses.</li>
+										<li>First 90 unsolved cases evaluated with the SV workflow.</li>
+										<li>Candidate structural variants identified in 7 individuals.</li>
+										<li>Included single-exon deletions and complex genomic rearrangements.</li>
+									</ul>
+
+									<p>
+										These findings demonstrate that structural variation represents an
+										important source of previously overlooked pathogenic variation in rare
+										disease cohorts and can substantially improve diagnostic yield when
+										analyzed systematically.
+									</p>
+
+									<hr class="major" />
+
+									<h2>Impact</h2>
+
+									<p>
+										Prior to development of this workflow, structural variant analysis was
+										rarely performed because analysts were required to manually review raw
+										structural variant call sets containing more than 10,000 events per
+										genome. The volume of candidate variants made comprehensive review
+										impractical for most cases.
+									</p>
+
+									<p>
+										By combining gene annotation, disease-gene prioritization, and
+										recurrent-event filtering, the pipeline reduced the number of candidate
+										variants requiring manual review to fewer than 30 per case. This reduced
+										analyst review time by approximately 90% and enabled structural variant
+										analysis to become a routine component of rare disease investigations.
+									</p>
+
+									<ul>
+										<li>Reduced candidate variants from &gt;10,000 to &lt;30 per case.</li>
+										<li>Reduced analyst review burden by approximately 90%.</li>
+										<li>Enabled systematic structural variant analysis across large cohorts.</li>
+										<li>Identified candidate pathogenic variants in previously unsolved patients.</li>
+										<li>Presented at ASHG 2025.</li>
+									</ul>
+
+									<hr class="major" />
+
+									<h2>Technologies</h2>
+
+									<p>
+										Python • Structural Variant Analysis • Whole Genome Sequencing •
+										GRIDSS • Manta • Genomic Annotation • OMIM • Rare Disease Genomics •
+										Variant Prioritization • Cohort-Scale Analysis
+									</p>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+
+						
+
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="index.html">Homepage</a></li>
+									<li><a href="NCH_Genetics.html">Variant Analyst</a></li>
+									<li>
+										<span class="opener">Centrosome Project Reports</span>
+										<ul>
+											<li><a href="Centrosome.html">Centrosome Maturation</a></li>
+											<li><a href="Centrosome_data_analysis.html">Parameter Analysis</a></li>
+											<li><a href="Network.html">Network Model</a></li>
+										</ul>
+									</li>
+									<li><a href="NLP.html">Fake News Detection</a></li>
+									<li><a href="VirtualCV.html">Experiences</a></li>
+								</ul>
+							</nav>
+
+						<!-- Section 
+							<section>
+								<header class="major">
+									<h2>Ante interdum</h2>
+								</header>
+								<div class="mini-posts">
+									<article>
+										<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+										<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+									</article>
+									<article>
+										<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+										<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+									</article>
+									<article>
+										<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+										<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+									</article>
+								</div>
+								<ul class="actions">
+									<li><a href="#" class="button">More</a></li>
+								</ul>
+							</section>-->
+
+						<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+								
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="mailto:shayne.plourde@outlook.com">shayne.plourde@outlook.com</a></li>
+									<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/shayne-plourde/">www.linkedin.com/in/shayne-plourde/</a></li>
+									<li class="icon brands fa-github"><a href="github.com/Shayne-Plourde">github.com/Shayne-Plourde</a></li>
+								</ul>
+							</section>
+
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; Untitled. All rights reserved.  Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+					</div>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
